@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- styles reset -->
+	<link rel="stylesheet" type="text/css" href="reset/style/style.css" />
+	<!-- styles contact -->
+	<link rel="stylesheet" href="about/styles/style.css" />
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+	<title>Sobre Nós</title>
+</head>
+
+<body>
+	<header>
+		<nav class="header-nav navbar navbar-expand-lg fixed-top">
+			<div class="container">
+				<!--Logo-->
+				<a class="navbar-brand" href="index.html">
+					<img class="logo" src="reset/img/logo1.png" alt="logo" />
+				</a>
+				<!--Togle button-->
+				<button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+					<i class="bi bi-list fs-1 togle-menu"></i>
+				</button>
+
+				<!--Sidebar-->
+				<div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+					aria-labelledby="navbarOffcanvasLgLabel">
+					<!--sidebar header-->
+					<div class="offcanvas-header">
+						<img class="logo" src="reset/img/logo1.png" alt="logo" />
+
+						<i class="bi bi-x-lg fs-1 close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+					</div>
+					<!--sidebar body-->
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-center fs-6 flex-grow-1">
+							<li class="nav-item">
+								<a class="nav-link a" href="index.html">Início</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a active" aria-current="page" href="about.html">Sobre nós</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a" href="tours-1.html">Pacotes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a" href="#">Contato</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a" href="admin/clientes/listar.jsp">Painel de administrador</a>
+							</li>
+						</ul>
+						<div class="social-icons fs-5 d-flex align-items-center justify-content-between">
+							<a href=""><i class="social-icon bi bi-whatsapp"></i></a>
+							<a href=""><i class="social-icon bi bi-facebook"></i></a>
+							<a href=""><i class="social-icon bi bi-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<nav id="breadcrumb" aria-label="breadcrumb">
+			<ol class="breadcrumb container">
+				<li class="breadcrumb-item fs-5"><a href="#">Início</a></li>
+				<li class="breadcrumb-item active fs-5" aria-current="page">
+					Sobre Nós
+				</li>
+			</ol>
+		</nav>
+		<section id="banner">
+			<div class="container">
+				<h1 class="col">
+					Sua aventura, <strong> nossa especialidade.</strong>
+				</h1>
+			</div>
+		</section>
+		<section id="mission">
+			<div class="container">
+				<div id="cards-mission">
+					<div class="card-mission">
+						<i class="bi bi-globe-americas mission-icon"></i>
+						<div class="mission-text">
+							<h3>Nossa missão</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a vel, adipisci debitis
+								quae similique?</p>
+						</div>
+
+					</div>
+					<div class="card-mission">
+						<i class="bi bi-map mission-icon"></i>
+						<div class="mission-text">
+							<h3>Visão</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a vel, adipisci debitis
+								quae similique?</p>
+						</div>
+					</div>
+					<div class="card-mission">
+						<i class="bi bi-signpost-split mission-icon"></i>
+						<div class="mission-text">
+							<h3>Valores</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a vel, adipisci debitis
+								quae similique?</p>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section id="history" class="section">
+			<div class="container">
+				<div class="history">
+					<div class="img-history"></div>
+					<div class="img-text">
+						<h3>Nossa História</h3>
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit dolore esse molestias,
+							quisquam exercitationem repellat nobis sit soluta? Voluptatibus, delectus quidem fuga
+							praesentium numquam dignissimos adipisci porro? Magni assumenda fugit asperiores quae
+							architecto? Nam voluptatum fugit ducimus doloremque sed quo reprehenderit tempora, mollitia
+							iure, corrupti quod deleniti! Obcaecati, quo ducimus?</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section id="team" class="section">
+			<div class="container">
+				<div class="title">
+					<h1 class="fs-2">Conheça Nossa Equipe</h1>
+				</div>
+				<div id="cards-team">
+					<div class="card-team" id="ceo">
+						<img class="img-team" src="home/assets/team/christina.jpg" alt="">
+						<div class="info-team">
+							<h3 class="name fs-4">Christina Sousa</h3>
+							<p class="occupation">CEO e Fundadora</p>
+							<p class="tel">(99) 99999-9999</p>
+						</div>
+					</div>
+					<div class="card-team">
+						<img class="img-team" src="home/assets/team/vicky.jpg" alt="">
+						<div class="info-team">
+							<h3 class="name fs-4">Lucas Silva</h3>
+							<p class="occupation">Agente de Viagens</p>
+							<p class="tel">(99) 99999-9999</p>
+						</div>
+					</div>
+					<div class="card-team">
+						<img class="img-team" src="home/assets/team/michelle.jpg" alt="">
+						<div class="info-team ">
+							<h3 class="name fs-4">Vitória Silva</h3>
+							<p class="occupation">Agente de Viagens</p>
+							<p class="tel">(99) 99999-9999</p>
+						</div>
+					</div>
+					<div class="card-team">
+						<img class="img-team" src="home/assets/team/tyler.jpg" alt="">
+						<div class="info-team">
+							<h3 class="name fs-4">João Gomes</h3>
+							<p class="occupation">Gerente</p>
+							<p class="tel">(99) 99999-9999</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer id="footer" class="section">
+		<div class="container grid-footer grid-areas-footer">
+			<div id="footer-logo">
+				<img src="./reset/img/logo1.png" alt="">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ratione minima sit unde maiores,
+					assumenda ut incidunt soluta quaerat voluptatum.</p>
+				<p>CNPJ 000000000000</p>
+			</div>
+			<div id="footer-contact">
+				<h3>Contate-nos</h3>
+				<ul>
+					<a href="">
+						<li>
+							<i class="bi bi-telephone"></i>
+							(99) 99999-9999
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<i class="bi bi-envelope-at"></i>
+							emailbacana@email.com
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<i class="bi bi-geo-alt"></i>
+							Rua 03, Centro, Capital - CP
+						</li>
+					</a>
+				</ul>
+			</div>
+			<div id="footer-links">
+				<h3>Links Úteis</h3>
+				<ul>
+					<a href="about.html">
+						<li>Sobre Nós</li>
+					</a>
+					<a href="index.html#team">
+						<li>Nosso Time</li>
+					</a>
+					<a href="tours-1.html">
+						<li>Nossos Pacotes</li>
+					</a>
+				</ul>
+			</div>
+			<div id="footer-social">
+				<h3>Siga-nos</h3>
+				<div class="icons-social">
+					<i class="bi bi-instagram"></i>
+					<i class="bi bi-facebook"></i>
+					<i class="bi bi-whatsapp"></i>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="copy">Todos os direitos reservados. Travel World 2023.</div>
+	</footer>
+	<!-- Bootstrap JavaScript Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+		integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

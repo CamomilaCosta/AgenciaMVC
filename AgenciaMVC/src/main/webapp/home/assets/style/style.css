@@ -1,0 +1,455 @@
+/*Carousel*/
+#carouselExampleIndicators{
+  margin-top: 82px;
+  height: 80vh;
+}
+
+.carousel-item div{
+  height: 70vh;
+  position: relative;
+
+}
+
+#carousel-item-1{
+  background-image: url(../bg-carousel/bg-1.jpg);
+}
+
+#carousel-item-2{
+  background-image: url(../bg-carousel/bg-2.jpg);
+}
+
+#carousel-item-3{
+  background-image: url(../bg-carousel/bg-3.jpg);
+}
+
+#carousel-item-1, #carousel-item-2, #carousel-item-3{
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+#carousel-item-1::after, #carousel-item-2::after, #carousel-item-3::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.carousel-text{
+  z-index: 2 !important;
+  position: absolute;
+  text-shadow: 1px 1px 15px rgb(0, 0, 0, 0.4);
+
+}
+
+.carousel-text p, .carousel-text h1 strong{
+  color: var(--base-white);
+}
+
+.carousel-indicators{
+  right: 0 !important;
+  left: auto !important;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 5% !important;
+  bottom: auto !important;
+}
+
+.carousel-indicators [data-bs-target]{
+  height: 10px !important;
+  background-color: var(--orange-base) !important;
+}
+
+.carousel-text h1{
+  font-size: var(--extra-big);
+  font-weight: 300;
+}
+
+.carousel-text h1 strong{
+  font-weight: 500;
+}
+
+.carousel-text p {
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: var(--text-medium3);
+}
+
+.carousel-text button{
+  padding: 15px 10px;
+  font-family: var(--font-family);
+  font-size: var(--text-medium3);
+  box-shadow: 1px 1px 10px var( rgb(0, 0, 0, 0.4));
+  border-radius: 0;
+  border-width: 2px;
+}
+
+/*********************CARDS**********************/
+#card-tour-types{
+  margin-top: -2rem;
+  padding-bottom: 4rem;
+  background-color: var(--base-white2);
+}
+.card-tour-type p {
+  color: var(--base-white);
+}
+
+#card-tour-types .container{
+  text-align: center;
+}
+
+
+.card-tour-type{
+  height: 400px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  background-position: center;
+
+  font-size: var(--subtitle-size);
+  color: var(--base-white);
+  font-weight: 600;
+  position: relative;
+
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: .3s;
+}
+
+
+.card-tour-type p{
+  z-index: 2 !important;
+  position: absolute;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0, 0.7);
+}
+
+#card-beach{
+  background-image: url(../cards-tours/praia.jpg);
+  background-size: cover;
+  overflow: hidden;
+  transition: .3s;
+}
+
+#card-city{
+  background-image: url(../cards-tours/urbanos.jpg);
+  background-size: cover;
+  transition: .3s;
+}
+
+#card-waterfall{
+  background-image: url(../cards-tours/cachoeira.jpg);
+  background-size: cover;
+  transition: .3s;
+}
+
+#card-waterfall:hover, #card-city:hover, #card-beach:hover {
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+#card-beach::after, #card-city::after, #card-waterfall::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.btn-tour{
+  color: var(--dark-blue-base);
+  font-size: var(--text-medium2);
+  text-decoration: none;
+
+  max-width: fit-content;
+  margin-top: 2rem;
+  transition: .2s;
+
+  border-radius: 0 !important;
+  border: 1px solid var(--dark-blue-base) !important;
+
+  align-self: center;
+}
+
+.btn-tour .bi-arrow-right{
+  color: var(--orange-base) !important;
+  margin-left: 0.2rem;
+  font-weight: 400;
+}
+
+.btn-tour:hover{
+  background-color: var(--dark-blue-base) !important;
+  color: var(--orange-base) !important;
+}
+
+
+/*******************Services*********************/
+
+#cards-services{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card-service{
+  border: 3px solid rgba(181, 181, 181, 0.545);
+  padding: 2rem 1rem;
+  transition: .3s;
+}
+
+.card-service:hover{
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  transition: .3s;
+}
+
+.card-service .text-service{
+  margin-bottom: 0;
+}
+
+.icon-service i{
+ color: var(--orange-base);
+}
+.icon-service {
+  margin-right: 1rem;
+ }
+
+.icon-service .bi::before, .icon-service [class^="bi-"]::before, .icon-service [class*=" bi-"]::before {
+vertical-align: 0.125em !important;
+}
+
+.description-service{
+  margin-bottom: 0;
+}
+
+/*******************TOP TOURS*********************/
+#top-tours{
+  background-color: var(--base-white2);
+}
+
+#top-tours .container{
+  text-align: center;
+}
+
+#cards-top-tours{
+  display: grid;
+  gap: 2rem;
+  text-align: left;
+}
+
+.card-top-tour{
+  display: flex;
+  border: 2px solid rgba(181, 181, 181, 0.545);
+}
+
+.img-tour{
+  height: 300px;
+  min-width: 50%;
+
+  background-size: cover;
+}
+
+#maragogi{
+  background-image: url(../top-tours/maragogi.jpg);
+}
+
+#chapada{
+  background-image: url(../top-tours/chapada-das-mesas.jpg);
+}
+
+#gramado{
+  background-image: url(../top-tours/gramado.jpg);
+}
+
+.info-tour{
+  flex: 1;
+  padding: 2rem 5rem 2rem 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-tour h2{
+  margin-bottom: 1rem;
+}
+
+.info-tour p{
+  margin-bottom: 1rem;
+}
+
+.price-tour{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border-radius: 0px 0px 0px 30px;
+  padding: 1rem;
+
+  background-color: var(--dark-blue-base);
+  color: var(--orange-base);
+  font-weight: 500;
+}
+
+.info-tour .btn{
+  border-radius: 0;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--dark-blue-base);
+  font-size: var(--text-medium3);
+}
+
+/*TEAM*/
+#cards-team{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.card-team{
+  display: grid;
+}
+
+.img-team{
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  margin-bottom: -50px;
+  z-index: 2;
+
+  border: 10px solid var(--base-white);
+
+  justify-self: center;
+}
+
+.info-team{
+  background-color: var(--dark-blue-base);
+  border-radius: 10px;
+
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+}
+
+.info-team .occupation{
+  color: var(--orange-base)
+}
+
+.info-team .name, .info-team .tel { 
+  color: var(--base-white);
+}
+
+
+
+
+@media (max-width: 1199px){
+  .card-service{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-service .text-service{
+    text-align: center;
+
+  }
+
+  /*****top tours******/
+  .img-tour {
+    height: 340px;
+  }
+  /***team***/
+  #cards-team{
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+  }
+  
+}
+
+@media (max-width: 991px){
+  /*Carousel*/
+  #carouselExampleIndicators{
+    margin-top: 68px;
+  }
+  /**CARDS**/
+  #card-tour-types{
+    margin-top: 0rem;
+    padding-top: 4rem;
+  }
+  .card-tour-type{
+    height: 300px;
+  }
+
+  /*******************Services*********************/
+  #cards-services{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 768px) { 
+  /*Carousel*/
+  .carousel-text button{
+   max-width: 200px;
+  }
+
+  .carousel-indicators [data-bs-target]{
+    height: 10px !important;
+    width: 20px !important;
+  }
+
+  .row.card-tour-types-container{
+    display: grid;
+    justify-content: center;
+  }
+  .card-tour-type{
+    width: 80vw !important;
+  }
+  /*Top tours*/
+  .card-top-tour{
+    display: block;
+  }
+  .info-tour{
+    padding: 2rem;
+  }
+  .price-tour {
+    top: -340px;
+  }
+  /***team***/
+  #cards-team{
+    grid-template-columns: 250px 250px;
+  }
+  
+ }
+
+ @media (max-width: 576px){
+  .container{
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .carousel-text h1 strong{
+    display: inline-block;
+  } 
+
+  /*******************Services*********************/
+  #cards-services{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /***team***/
+  #cards-team{
+    grid-template-columns: 300px;
+  }
+  
+ }

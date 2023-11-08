@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Contato</title>
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+	<!-- styles reset -->
+	<link rel="stylesheet" type="text/css" href="reset/style/style.css" />
+
+	<!--styles contact -->
+	<link rel="stylesheet" href="contact/style/style.css" />
+</head>
+
+<body>
+	<header>
+		<nav class="header-nav navbar navbar-expand-lg fixed-top">
+			<div class="container">
+				<!--Logo-->
+				<a class="navbar-brand" href="#">
+					<img class="logo" src="reset/img/logo1.png" alt="logo" />
+				</a>
+				<!--Togle button-->
+				<button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+					<i class="bi bi-list fs-1 togle-menu"></i>
+				</button>
+
+				<!--Sidebar-->
+				<div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+					aria-labelledby="navbarOffcanvasLgLabel">
+					<!--sidebar header-->
+					<div class="offcanvas-header">
+						<img class="logo" src="reset/img/logo1.png" alt="logo" />
+
+						<i class="bi bi-x-lg fs-1 close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+					</div>
+					<!--sidebar body-->
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-center fs-6 flex-grow-1">
+							<li class="nav-item">
+								<a class="nav-link a" href="index.html">Início</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a" href="about.html">Sobre nós</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a" href="tours-1.html">Pacotes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a active" aria-current="page" href="#">Contato</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link a" href="admin/clientes/listar.jsp">Painel de administrador</a>
+							</li>
+						</ul>
+						<div class="social-icons fs-5 d-flex align-items-center justify-content-between">
+							<a href=""><i class="social-icon bi bi-whatsapp"></i></a>
+							<a href=""><i class="social-icon bi bi-facebook"></i></a>
+							<a href=""><i class="social-icon bi bi-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section id="form" class="section">
+			<div class="container">
+				<div id="contact-info">
+					<h2>Informações de contato</h2>
+					<ul>
+						<li>
+							<a href="">
+								<i class="bi bi-pin-map"></i>
+								<p>Rua 03, Centro, Capital - CP</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="bi bi-telephone"></i>
+								<p>(99) 99999-9999</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="bi bi-envelope-at"></i>
+								<p>emailbacana@email.com</p>
+							</a>
+						</li>
+					</ul>
+					<div id="social-icon">
+						<a href=""><i class="social-icon bi bi-whatsapp"></i></a>
+						<a href=""><i class="social-icon bi bi-facebook"></i></a>
+						<a href=""><i class="social-icon bi bi-instagram"></i></a>
+					</div>
+				</div>
+				<div id="contact-form">
+					<h2>Envie uma mensagem!</h2>
+					<form action="get" id="form">
+						<div id="floating-name" class="form-floating">
+							<input type="text" id="first-name" name="first-name" class="form-control focus-ring"
+								placeholder="Nome" />
+							<label for="first-name">Nome</label>
+						</div>
+						<div id="floating-last-name" class="form-floating">
+							<input type="text" id="last-name" name="last-name" class="form-control"
+								placeholder="Sobrenome" />
+							<label for="last-name">Sobrenome</label>
+						</div>
+						<div id="floating-email" class="form-floating">
+							<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" />
+							<label for="last-name">E-mail</label>
+						</div>
+						<div id="floating-select" class="form-floating">
+							<select class="form-select form-control" id="select"
+								aria-label="Floating label select example">
+								<option selected>Escolha uma opção</option>
+								<option value="cidade">Centros Urbanos</option>
+								<option value="praias">Praias</option>
+								<option value="cachoeiras">Cachoeiras</option>
+								<option value="ainda-escolher">Ainda não decidi</option>
+							</select>
+							<label for="select">Para onde vai?</label>
+						</div>
+						<div id="floating-message" class="form-floating">
+							<textarea class="form-control" placeholder="Leave a comment here" id="message"
+								style="height: 100px"></textarea>
+							<label for="message">Digite sua mensagem</label>
+						</div>
+						<input type="submit" value="Enviar" id="btn-submit" />
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer id="footer" class="section">
+		<div class="container grid-footer grid-areas-footer">
+			<div id="footer-logo">
+				<img src="./reset/img/logo1.png" alt="" />
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ratione
+					minima sit unde maiores, assumenda ut incidunt soluta quaerat
+					voluptatum.
+				</p>
+				<p>CNPJ 000000000000</p>
+			</div>
+			<div id="footer-contact">
+				<h3>Contate-nos</h3>
+				<ul>
+					<a href="">
+						<li>
+							<i class="bi bi-telephone"></i>
+							(99) 99999-9999
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<i class="bi bi-envelope-at"></i>
+							emailbacana@email.com
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<i class="bi bi-geo-alt"></i>
+							Rua 03, Centro, Capital - CP
+						</li>
+					</a>
+				</ul>
+			</div>
+			<div id="footer-links">
+				<h3>Links Úteis</h3>
+				<ul>
+					<a href="about.html">
+						<li>Sobre Nós</li>
+					</a>
+					<a href="index.html#team">
+						<li>Nosso Time</li>
+					</a>
+					<a href="tours-1.html">
+						<li>Nossos Pacotes</li>
+					</a>
+				</ul>
+			</div>
+			<div id="footer-social">
+				<h3>Siga-nos</h3>
+				<div class="icons-social">
+					<i class="bi bi-instagram"></i>
+					<i class="bi bi-facebook"></i>
+					<i class="bi bi-whatsapp"></i>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="copy">
+			Todos os direitos reservados. Travel World 2023.
+		</div>
+	</footer>
+	<!-- Bootstrap JavaScript Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+/*Listar*/
+.btn-criar-cliente {
+	background-color: var(--dark-blue-base);
+	color: var(--orange-base);
+	padding: .5rem 1rem;
+	border: 1px solid var(--dark-blue-base);
+	transition: .2s;
+}
+
+.btn-criar-cliente:hover {
+	background-color: #fff;
+	color: var(--dark-blue-base);
+	border: 1px solid var(--dark-blue-base);
+	transition: .2s;
+}
+
+/*Adcionar*/
+
+
+#form{
+  margin-top: 1rem;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 5rem;
+}
+
+#btn-submit{
+  background: var(--dark-blue-base);
+  color: var(--base-white);
+  max-width: 10rem;
+  border: 2px solid var(--dark-blue-base);
+  padding: 0.5rem 2rem;
+  transition: .2s;
+  margin-right: 20px;
+}
+
+#btn-submit:hover{
+  background: var(--base-white);
+  color: var(--dark-blue-base);
+  font-weight: 500;
+  transition: .2s;
+}
+
+.form-control, .form-control:focus {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+}
+
+.form-control{
+  border-bottom: 1px solid var(--dark-blue-base);
+  border-radius: 0;
+}
+
+.form-floating:focus{
+  background-color: rgba(0, 0, 0, 0.294) !important;
+}
+
+input:focus{
+outline: none !important;
+}
+
+#buttons{
+	width: 100%;
+	justify-content: center;
+}

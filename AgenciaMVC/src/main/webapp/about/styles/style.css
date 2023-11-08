@@ -1,0 +1,258 @@
+main{
+  margin-top: 82px;
+}
+
+/**breadcrumb**/
+
+#breadcrumb{
+  background-color: var(--base-white2) !important;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.breadcrumb{
+  --bs-breadcrumb-margin-bottom: 0rem !important;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: var(--dark-blue-base);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  padding: 0rem .5rem 0rem .5rem;
+}
+
+.breadcrumb li a::before{
+  content: '';
+  width: 0%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0rem;
+
+  background: var(--orange-base);
+  z-index: -1;
+  transition: .3s;
+}
+
+.breadcrumb li a:hover::before{
+  width: 100%;
+  transition: .3s;
+}
+
+/**Banner**/
+#banner{
+  background-image: url(../img/banner/travel.jpg);
+  background-size: cover;
+  background-position: 50% 40%;
+
+  height: 70vh;
+
+  position: relative;
+}
+
+#banner::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#banner .container h1, #banner .container h1 strong{
+  color: var(--base-white2);
+  font-size: 4.5rem;
+  text-shadow: 1px 1px 10px var(--dark-blue-base-blur);
+}
+
+#banner .container h1{
+  font-weight: 400;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#banner .container h1 strong{
+  font-weight: 500;
+} 
+
+/**cards**/
+
+#cards-mission{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 200;
+}
+
+.card-mission{
+  height: fit-content;
+  background-color: var(--dark-blue-base);
+
+  border:3px solid var(--orange-base);
+  border-radius: 10px;
+
+  padding: 2rem 2rem;
+  color: var(--base-white2);
+
+  display: grid;
+  justify-items: center;
+}
+
+.mission-icon{
+  color: var(--orange-base);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission-text{
+  text-align: center;
+  color: var(--orange-base);
+}
+
+.card-mission p{
+  margin-bottom: 0 !important;
+  color: var(--base-white);
+}
+
+#history{
+  background-color: var(--base-white2);
+}
+
+.history{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(188, 188, 188, 0.867);
+}
+
+.history .img-history{
+  height: 350px;
+
+  background-image: url(../img/history/map.jpg);
+  background-size: cover;
+}
+
+.img-text{
+  padding: 2rem;
+  background-color: var(--base-white);
+  display: grid;
+  align-items: center;
+}
+
+.img-text p{
+  margin-bottom: 0rem !important;
+}
+
+/*TEAM*/
+#cards-team{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.card-team{
+  display: grid;
+}
+
+.img-team{
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  margin-bottom: -50px;
+  z-index: 2;
+
+  border: 10px solid var(--base-white);
+
+  justify-self: center;
+}
+
+.info-team{
+  background-color: var(--dark-blue-base);
+  border-radius: 10px;
+
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+}
+
+.info-team .occupation{
+  color: var(--orange-base)
+}
+
+.info-team .name, .info-team .tel { 
+  color: var(--base-white);
+}
+
+@media (max-width: 991px){
+  main{
+    margin-top: 68px;
+  }
+
+  #banner .container h1, #banner .container h1 strong{
+    font-size: 3.5rem;
+  }
+
+  #cards-mission{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 3rem;
+   
+  }
+
+  .card-mission{
+    max-width: 60vw;
+  }
+  .history{
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+  .history .img-history{
+    height: 250px;
+  }
+
+  /***team***/
+  #cards-team{
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px){
+  #banner{
+    height: 300px;
+  }
+  #banner .container h1, #banner .container h1 strong{
+    font-size: 2.5rem;
+  }
+  /***team***/
+  #cards-team{
+    grid-template-columns: 250px 250px;
+  }
+}
+
+@media(max-width: 576px){
+  #banner{
+    height: 250px;
+  }
+  #banner .container h1, #banner .container h1 strong{
+    font-size: 2rem;
+  }
+  .card-mission{
+    max-width: 80vw;
+  }
+  /***team***/
+  #cards-team{
+    grid-template-columns: 300px;
+  }
+}

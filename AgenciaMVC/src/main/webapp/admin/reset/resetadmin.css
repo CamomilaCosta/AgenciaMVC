@@ -1,0 +1,16 @@
+#itens-admin{
+	margin-top: 82px;
+	padding-top: 2rem;
+}
+
+.card-header .nav .nav-item .nav-link{
+	color: var(--orange-base);
+}
+
+.card-header .nav .nav-item .nav-link.active{
+	color: var(--dark-blue-base);
+}
+
+.card-header{
+	background-color: var(--dark-blue-base);
+}

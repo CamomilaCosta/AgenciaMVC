@@ -1,0 +1,153 @@
+main{
+  margin-top: 82px;
+}
+
+/**breadcrumb**/
+
+#breadcrumb{
+  background-color: var(--base-white2) !important;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.breadcrumb{
+  --bs-breadcrumb-margin-bottom: 0rem !important;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: var(--dark-blue-base);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  padding: 0rem .5rem 0rem .5rem;
+}
+
+.breadcrumb li a::before{
+  content: '';
+  width: 0%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0rem;
+
+  background: var(--orange-base);
+  z-index: -1;
+  transition: .3s;
+}
+
+.breadcrumb li a:hover::before{
+  width: 100%;
+  transition: .3s;
+}
+
+/**Tours**/
+#cards-tours{
+  display: grid;
+  gap: 2rem;
+  text-align: left;
+}
+.card-tour{
+  display: flex;
+  border: 2px solid rgba(181, 181, 181, 0.545);
+}
+
+.img-tour{
+  height: 300px;
+  min-width: 50%;
+
+  background-size: cover;
+}
+
+#maragogi{
+  background-image: url(../../home/assets/top-tours/maragogi.jpg);
+}
+
+#chapada{
+  background-image: url(../../home/assets/top-tours/chapada-das-mesas.jpg);
+}
+
+#gramado{
+  background-image: url(../../home/assets/top-tours/gramado.jpg);
+}
+
+.info-tour{
+  flex: 1;
+  padding: 2rem 5rem 2rem 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-tour h2{
+  margin-bottom: 1rem;
+}
+
+.info-tour p{
+  margin-bottom: 1rem;
+}
+
+.price-tour{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border-radius: 0px 0px 0px 30px;
+  padding: 1rem;
+
+  background-color: var(--dark-blue-base);
+  color: var(--orange-base);
+  font-weight: 500;
+}
+
+.info-tour .btn{
+  border-radius: 0;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--dark-blue-base);
+  font-size: var(--text-medium3);
+}
+
+/**Pagination**/
+.pagination{
+  display: grid;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.page-link{
+  color: var(--dark-blue-base) !important;
+}
+.page-item.active a{
+  color: var(--orange-base) !important;
+  background-color: var(--dark-blue-base) !important;
+  border: 1px solid var(--dark-blue-base) !important;
+  font-weight: 500;
+}
+
+
+@media (max-width: 1199px){
+   /*****tours******/
+   .img-tour {
+    height: 340px;
+  }
+}
+
+@media(max-width: 991px){
+  main{
+    margin-top: 68px;
+  }
+}
+
+@media (max-width: 768px){
+    /*Top tours*/
+    .card-tour{
+      display: block;
+    }
+    .info-tour{
+      padding: 2rem;
+    }
+    .price-tour {
+      top: -340px;
+    }
+}

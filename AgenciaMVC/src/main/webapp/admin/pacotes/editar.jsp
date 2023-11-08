@@ -56,61 +56,61 @@
 						<form action="AtualizarPacote" id="form">
 							<h3>Editar Pacote</h3>
 							<input type="hidden" id="id" name="id" value="${pacote.id}" />
-							<div id="floating-empresa" class="form-floating">
-								<select id="empresa" name="empresa" class="form-select"
-									aria-label="Floating label select example">
-									<option selected>${pacote.empresa}</option>
-									<option value="LATAM">LATAM</option>
-									<option value="Azul">Azul</option>
-									<option value="Gol">Gol</option>
-								</select> <label for="empresa">Escolha a empresa</label>
-							</div>
-							<div id="floating-cidadeOrigem" class="form-floating">
-								<input type="text" id="cidade-origem" name="cidade_origem"
-									class="form-control focus-ring" value="${pacote.cidade_origem }"/>
+							<div id="floating-Origem" class="form-floating">
+								<input type="text" id="cidade_origem" name="cidade_origem"
+									class="form-control focus-ring" value="${pacote.origem}" />
 								<label for="cidade-origem">Cidade de origem</label>
 							</div>
-							<div id="floating-cidadeDestino" class="form-floating">
-								<input type="text" id="cidade-destino" name="cidade_destino"
-									class="form-control focus-ring" value="${pacote.cidade_destino}" />
+							<div id="floating-Destino" class="form-floating">
+								<input type="text" id="cidade_destino" name="cidade_destino"
+									class="form-control focus-ring" value="${pacote.destino}" />
 								<label for="cidade-destino">Cidade de destino</label>
 							</div>
-							<div id="floating-aeroportoOrigem" class="form-floating">
-								<input type="text" id="aeroporto_decolagem"
-									name="aeroporto_decolagem" class="form-control focus-ring"
-									value="${pacote.aeroporto_decolagem}" /> <label
-									for="aeroporto_decolagem">Aeroporto de origem</label>
+							<div id="floating-dataIda" class="form-floating">
+								<input type="date" id="data_ida" name="data_ida"
+									class="form-control" value="${pacote.data_ida}" /> <label
+									for="data_ida">Data de ida</label>
 							</div>
-							<div id="floating-aeroportoDestino" class="form-floating">
-								<input type="text" id="aeroporto_pouso" name="aeroporto_pouso"
-									class="form-control focus-ring"
-									value="${pacote.aeroporto_pouso}" /> <label
-									for="aeroporto_pouso">Aeroporto de destino</label>
+							<div id="floating-dataVolta" class="form-floating">
+								<input type="date" id="data_volta" name="data_volta"
+									class="form-control" value="${pacote.data_volta}" /> <label
+									for="data_volta">Data de volta</label>
 							</div>
-							<div id="floating-HoraSaida" class="form-floating">
-								<input type="text" id="hora_decolagem" name="hora_decolagem"
-									class="form-control focus-ring" value="${pacote.hora_decolagem}" />
-								<label for="hora_decolagem">Horário de saída</label>
+							<div id="floating-voo-ida" class="form-floating">
+								<select id="voo-ida" name="id_voo_ida" class="form-select"
+									aria-label="Floating label select example">
+									<option value="${voo_ida.id}" selected>${voo_ida.cidade_origem}| ${voo_ida.cidade_destino} | ${voo_ida.dia_decolagem}</option>
+									<jstl:forEach items="${listavoos}" var="v">
+									<option value="${v.id}">${v.cidade_origem} | ${v.cidade_destino} |${v.dia_decolagem}</option>
+									</jstl:forEach>
+								</select> <label for="voo-ida">Escolha o voo de ida</label>
 							</div>
-							<div id="floating-HoraChegada" class="form-floating">
-								<input type="text" id="hora_pouso" name="hora_pouso"
-									class="form-control focus-ring"
-									value="${pacote.hora_pouso}" /> <label for="hora_pouso">Horário
-									de chegada</label>
+							<div id="floating-voo-volta" class="form-floating">
+								<select id="voo-volta" name="id_voo_volta" class="form-select"
+									aria-label="Floating label select example">
+									<option value="${voo_volta.id}" selected>${voo_volta.cidade_origem}| ${voo_volta.cidade_destino} | ${voo_volta.dia_decolagem}</option>
+									<jstl:forEach items="${listavoos}" var="v">
+									<option value="${v.id}">${v.cidade_origem} | ${v.cidade_destino} |${v.dia_decolagem}</option>
+									</jstl:forEach>
+								</select> <label for="voo-volta">Escolha o voo de volta</label>
 							</div>
-							<div id="floating-dataSaida" class="form-floating">
-								<input type="date" id="dia_decolagem" name="dia_decolagem"
-									class="form-control" value="${pacote.dia_decolagem}" /> <label
-									for="dia_decolagem">Data de sáida</label>
+							<div id="floating-hotel" class="form-floating">
+								<select id="hotel" name="id_hotel" class="form-select"
+									aria-label="Floating label select example">
+									<option value="${hotel.id}" selected>${hotel.nome}</option>
+									<jstl:forEach items="${listahoteis}" var="h">
+									<option value="${h.id}">${h.nome}</option>
+									</jstl:forEach>
+								</select> <label for="hotel">Escolha o hotel</label>
 							</div>
-							<div id="floating-dataChegada" class="form-floating">
-								<input type="date" id="dia_pouso" name="dia_pouso"
-									class="form-control" value="${pacote.dia_pouso}" /> <label
-									for="dia_pouso">Data de chegada</label>
+							<div id="floating-dias" class="form-floating">
+								<input type="number" id="dias" name="dias"
+									class="form-control" value="${pacote.dias_pacote}" readonly/> <label
+									for="dias">Dias do pacote</label>
 							</div>
 							<div id="floating-preco" class="form-floating">
-								<input type="number" step="0.1" id="preco" name="preco"
-									class="form-control" value="${pacote.preco}" /> <label
+								<input type="number" id="preco" name="preco"
+									class="form-control" value="${pacote.preco}" readonly/> <label
 									for="preco">Preço</label>
 							</div>
 							<div id="buttons" class="d-flex">

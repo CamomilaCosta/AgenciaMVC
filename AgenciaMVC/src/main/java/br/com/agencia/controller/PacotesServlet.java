@@ -53,12 +53,12 @@ public class PacotesServlet extends HttpServlet {
 		case "/AdicionarGetPacote":
 			getCreate(request, response);
 			break;
-//		case "/EditarPacote":
-//			edit(request, response);
-//			break;
-//		case "/AtualizarPacote":
-//			update(request, response);
-//			break;
+		case "/EditarPacote":
+			edit(request, response);
+			break;
+		case "/AtualizarPacote":
+			update(request, response);
+			break;
 		default:
 			response.sendRedirect("index.html");
 			break;
@@ -110,32 +110,45 @@ public class PacotesServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("./admin/pacotes/adicionar.jsp");
 		dispatcher.forward(request, response);
 	}
-	/*protected void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	protected void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		pacote = vdao.readByID(id);
-
+		pacote = pdao.readByID(id);
+		Voos voo_ida, voo_volta;
+		Hoteis hotel;
+		
+		voo_ida = vdao.readByID(pacote.getVoo_ida().getId());
+		voo_volta = vdao.readByID(pacote.getVoo_volta().getId());
+		hotel = hdao.readByID(pacote.getHotel().getId());
+		
+		request.setAttribute("voo_ida", voo_ida);
+		request.setAttribute("voo_volta", voo_volta);
+		request.setAttribute("hotel", hotel);
 		request.setAttribute("pacote", pacote);
+		
+		List<Voos> listavoos = vdao.read();
+		List<Hoteis> listahoteis = hdao.read();
+
+		request.setAttribute("listavoos", listavoos);
+		request.setAttribute("listahoteis", listahoteis);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("./admin/pacotes/editar.jsp");
 		dispatcher.forward(request, response);
-	}*/
+	}
 
-//	protected void update(HttpServletRequest request, HttpServletResponse response)
-//			throws ServletException, IOException {
-//		pacote.setId(Integer.parseInt(request.getParameter("id")));
-//		pacote.setEmpresa(request.getParameter("empresa"));
-//		pacote.setCidade_origem(request.getParameter("cidade_origem"));
-//		pacote.setCidade_destino(request.getParameter("cidade_destino"));
-//		pacote.setAeroporto_decolagem(request.getParameter("aeroporto_decolagem"));
-//		pacote.setAeroporto_pouso(request.getParameter("aeroporto_pouso"));
-//		pacote.setHora_decolagem(request.getParameter("hora_decolagem"));
-//		pacote.setHora_pouso(request.getParameter("hora_pouso"));
-//		pacote.setDia_decolagem(Date.valueOf(request.getParameter("dia_decolagem")));
-//		pacote.setDia_pouso(Date.valueOf(request.getParameter("dia_pouso")));
-//		pacote.setPreco(Float.parseFloat(request.getParameter("preco")));
-//
-//		vdao.update(pacote);
-//		response.sendRedirect("Pacotes");
-//	}
+	protected void update(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		pacote.setId(Integer.parseInt(request.getParameter("id")));
+		pacote.setOrigem(request.getParameter("cidade_origem"));
+		pacote.setDestino(request.getParameter("cidade_destino"));
+		pacote.setData_ida(Date.valueOf(request.getParameter("data_ida")));
+		pacote.setData_volta(Date.valueOf(request.getParameter("data_volta")));
+		pacote.setVoo_ida(vdao.readByID(Integer.parseInt(request.getParameter("id_voo_ida"))));
+		pacote.setVoo_volta(vdao.readByID(Integer.parseInt(request.getParameter("id_voo_volta"))));
+		pacote.setHotel(hdao.readByID(Integer.parseInt(request.getParameter("id_hotel"))));
+
+		pdao.update(pacote);
+		response.sendRedirect("Pacotes");
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
